@@ -1,25 +1,25 @@
 const eachCipher = (string, matcher, alphabet, num) => {
-  let str = string.split('').map((x, i)=>({i:i, val: x}))
-  let lowers = str.filter(x => x.val.match(matcher)).map(x => {
-    let index = alphabet.findIndex(y => y === x.val);
-    x.val = alphabet[(index + num) % 26]
+  const str = string.split('').map((x, i) => ({ i, val: x }));
+  const lowers = str.filter(x => x.val.match(matcher)).map(x => {
+    const index = alphabet.findIndex(y => y === x.val);
+    x.val = alphabet[(index + num) % 26];
     return x;
   });
   return lowers;
-}
+};
 
 const cipher = (string, num) => {
   num = Math.abs(num);
-  let abcLow = 'abcdefghijklmnopqrstuvwxyz'.split('');
-  let abcUp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+  const abcLow = 'abcdefghijklmnopqrstuvwxyz'.split('');
+  const abcUp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
   const lower = new RegExp(/[a-z]/);
   const upper = new RegExp(/[A-Z]/);
 
-  let lowers = eachCipher(string, lower, abcLow, num);
-  let uppers = eachCipher(string, upper, abcUp, num);
+  const lowers = eachCipher(string, lower, abcLow, num);
+  const uppers = eachCipher(string, upper, abcUp, num);
 
-  let str = string.split('');
+  const str = string.split('');
 
   lowers.forEach((x) => {
     str[x.i] = x.val;
@@ -33,4 +33,4 @@ const cipher = (string, num) => {
 };
 
 
-module.exports =  cipher;
+module.exports = cipher;
