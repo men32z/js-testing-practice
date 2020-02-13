@@ -1,5 +1,5 @@
 const eachCipher = (string, matcher, alphabet, num) => {
-  str = string.split('').map((x, i)=>({i:i, val: x}))
+  let str = string.split('').map((x, i)=>({i:i, val: x}))
   let lowers = str.filter(x => x.val.match(matcher)).map(x => {
     let index = alphabet.findIndex(y => y === x.val);
     x.val = alphabet[(index + num) % 26]
@@ -29,9 +29,8 @@ const cipher = (string, num) => {
     str[x.i] = x.val;
   });
 
-
   return str.join('');
 };
 
 
-export default cipher;
+module.exports =  cipher;
