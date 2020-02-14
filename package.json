@@ -1,0 +1,26 @@
+{
+  "name": "js-testing-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/men32z/js-testing-practice.git"
+  },
+  "author": "Luis Preza, Christian Romero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/men32z/js-testing-practice/issues"
+  },
+  "homepage": "https://github.com/men32z/js-testing-practice#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.8.4",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "jest": "^25.1.0"
+  }
+}
