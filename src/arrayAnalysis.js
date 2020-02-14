@@ -5,7 +5,4 @@ const analyze = (array) => ({
   length: array.length,
 });
 
-module.exports = analyze;
-// const object = analyze([1,8,3,4,2,6]);
-//
-// console.log(object);
+export default analyze;

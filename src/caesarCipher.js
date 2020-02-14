@@ -33,4 +33,4 @@ const cipher = (string, num) => {
 };
 
 
-module.exports = cipher;
+export default cipher;

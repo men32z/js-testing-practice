@@ -14,4 +14,4 @@ const calculator = {
 
 };
 
-module.exports = calculator;
+export default calculator;

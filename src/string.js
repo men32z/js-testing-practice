@@ -4,4 +4,4 @@ function capitalize(string) {
   return string.join('');
 }
 
-module.exports = capitalize;
+export default capitalize;
